@@ -23,8 +23,8 @@ mongoose.connect(process.env.URLDB,
   console.log('Base ONLINE');
 });
 
-
-app.listen(process.env.PORT, () => {
+const port = process.env.PORT;
+app.listen(port, () => {
     console.log(`Escuchando puerto: ${port}`);
 })
 
