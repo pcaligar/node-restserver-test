@@ -4,9 +4,7 @@ const jwt = require('jsonwebtoken');
 let verificaToken = (req, res, next) => {
 
     let token = req.get('authorization');
-
-console.log(process.env.SEED);
-
+    
     jwt.verify(token, process.env.SEED, (err, decoded) => {
 
         if(err) {
@@ -20,7 +18,6 @@ console.log(process.env.SEED);
         next();
     });
 };
-
 
 
 let verificaAdminRol = (req, res, next) => {
