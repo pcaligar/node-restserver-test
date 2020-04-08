@@ -12,3 +12,15 @@ if(process.env.NODE_ENV === 'dev'){
     urlDB = process.env.MONGO_URI;
 }
 process.env.URLDB = urlDB;
+
+//VENCIMIENTO TOKEN
+process.env.EXPIRES_TOKEN = 60 * 60 * 24 * 30;
+
+//SEED TOKEN
+process.env.SEED = process.env.SEED || 'seed-desarrollo'
+
+
+
+
+
+
